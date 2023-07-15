@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ccc;
+}
+.container{
+    margin: 0 auto;
+    max-width: 600px;
+}
+.apply{
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 45px;
+    padding: 30px;
+}
+.t_small{
+    font-size: 18px;
+}
+.f_container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/*this is 200px will be used if more space is avaliable and 1 fr if less space is available,auto fit so that it fits normally */
+    gap: 20px;
+}
+.control{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+input,select,textarea{
+    border-radius: 3.5px;
+    border:2px solid rgba(255, 0, 0, 0.323) ;
+    padding: 6px 10px;
+}
+.b_container{
+    display: flex;
+    justify-content:flex-end ;
+    margin-top: 8px;
+}
+button{
+    background-color: red;
+    border: 2px soild red;
+    transition: 0.3 ease-out;
+    border-radius:4px ;
+    color: white;   
+}
+button:hover{
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.15em);
+    cursor: pointer;
+}
+.Text{/*this is used so that it takes the space of 2 grids in a single one */
+    grid-column: 1/ span 2;
+}
+.Text textarea{
+    width: 100%;
+}
+@media(max_width:460px){
+    .Text{
+        grid-column: 1/span 1; 
+        /*this is made as span 1 so that when we reduce the size it takes the space of only one column */
+    }
+};
